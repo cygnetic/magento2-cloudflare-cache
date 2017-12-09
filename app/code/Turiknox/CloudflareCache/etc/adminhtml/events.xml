@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_CloudflareCache
+ * @category   Turiknox
+ * @package    Turiknox_CloudflareCache
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/Turiknox/magento2-cloudflare-cache/blob/master/LICENSE.md
+ * @version    1.0.0
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="adminhtml_cache_flush_all">
+        <observer name="cloudflarecache_purge_cloudflare_cache" instance="Turiknox\CloudflareCache\Observer\PurgeCloudflareCache" />
+    </event>
+</config>
